@@ -7,5 +7,13 @@ app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 
 db = MongoEngine(app)
 
+
+def register_blueprints(app):
+    # prevents circular imports
+    from tumblelog.views import posts
+    app.register_blueprint(posts)
+
+register_blueprints(app)
+
 if __name__ == '__main__':
     app.run()
