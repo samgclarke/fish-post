@@ -19,7 +19,7 @@
         <p><img src="{{ post.image_url }}" /><p>
       {% endif %}
       <p>
-        {{ post.author }} | 
+        <strong>{{ post.author }}</strong> | 
         {{ post.created_at.strftime('%H:%M %Y-%m-%d') }} |
         {% with total=post.comments|length %}
             {{ total }} comment {%- if total > 1 %}s{%- endif -%}
