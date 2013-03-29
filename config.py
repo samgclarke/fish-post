@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import Blueprint
 from mongoengine import connect
 
 app = Flask(__name__)
@@ -18,3 +19,26 @@ connect(
     port=10095
 )
 
+
+CSRF_ENABLED = True
+SECRET_KEY = 'teddymonkey'
+
+OPENID_PROVIDERS = [
+    {'name': 'Google', 'url': 'https://www.google.com/accounts/o8/id'},
+    {'name': 'Yahoo', 'url': 'https://me.yahoo.com'},
+    {'name': 'AOL', 'url': 'http://openid.aol.com/<username>'},
+    {'name': 'Flickr', 'url': 'http://www.flickr.com/<username>'},
+    {'name': 'MyOpenID', 'url': 'https://www.myopenid.com'}]
+
+
+###########################
+### register blueprints ###
+###########################
+def register_blueprints(app):
+    # prevents circular imports
+    from mongo_log.views import posts
+    from mongo_log.admin import admin
+    app.register_blueprint(posts)
+    app.register_blueprint(admin)
+
+register_blueprints(app)

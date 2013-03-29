@@ -17,11 +17,6 @@ else:
 db = MongoEngine(app)
 
 
-@app.route('/')
-def hello_world():
-    return 'Hello Mongo: '
-
-
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
