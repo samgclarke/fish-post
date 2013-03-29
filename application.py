@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 import os
-import datetime
-from flask import Flask, url_for
-from flask.ext.mongoengine import MongoEngine, mongoengine
-from mongoengine import connect
+from flask.ext.mongoengine import MongoEngine
 
 from config import app
 
@@ -13,9 +10,8 @@ if __name__ == '__main__':
 else:
     app.config.from_object('heroku_config')
 
-
+# wrapp app in mongengine
 db = MongoEngine(app)
-
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
