@@ -8,7 +8,10 @@ from mongoengine import connect
 from config import app
 
 # get config settings
-app.config.from_object('heroku_config')
+if __name__ == '__main__':
+    app.config.from_object('config')
+else:
+    app.config.from_object('heroku_config')
 
 
 db = MongoEngine(app)
