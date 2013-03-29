@@ -5,7 +5,7 @@ from flask.ext.mongoengine.wtf import model_form
 
 from mongo_log.views import login_required
 from mongo_log.models import Post, BlogPost, \
-    Video, Image, Quote, Comment
+    Video, Image, Quote, User
 
 admin = Blueprint('admin', __name__, template_folder='templates')
 
@@ -38,7 +38,7 @@ class Detail(MethodView):
             post = Post.objects.get_or_404(slug=slug)
             # Handle old posts types as well
             cls = post.__class__ if post.__class__ != Post else BlogPost
-            form_cls = model_form(cls, exclude=('created_at', 'comments', 'author'))
+            form_cls = model_form(cls, exclude=('created_at', 'comments'))
             if request.method == 'POST':
                 form = form_cls(request.form, inital=post._data)
             else:
@@ -47,7 +47,7 @@ class Detail(MethodView):
             # Determine which post type we need
             cls = self.class_map.get(request.args.get('type', 'post'))
             post = cls()
-            form_cls = model_form(cls, exclude=('created_at', 'comments', 'author'))
+            form_cls = model_form(cls, exclude=('created_at', 'comments'))
             form = form_cls(request.form)
         context = {
             "post": post,
@@ -67,7 +67,7 @@ class Detail(MethodView):
         if form.validate():
             post = context.get('post')
             form.populate_obj(post)
-            #post(author=g.user)
+            #post(author=_user)
             post.save()
 
             return redirect(url_for('admin.index'))
