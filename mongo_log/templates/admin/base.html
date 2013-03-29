@@ -28,4 +28,16 @@
 {% block js_footer %}
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
   <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('#title').keyup(function () {
+              // get title
+              var val = $('#title').val();
+              // replace all space with dashes
+              var slug = val.replace(/\s/g, "-");
+              // inject into slug
+              $('#slug').val(slug);
+          })
+      });
+  </script>
 {% endblock %}

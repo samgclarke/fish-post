@@ -26,6 +26,9 @@ class User(db.DynamicDocument):
     #def get_id(self):
     #    return unicode(self.id)
 
+    def __unicode__(self):
+        return self.username
+
     def __repr__(self):
         return '<User %r>' % (self.username)
 
@@ -35,6 +38,7 @@ class Post(db.DynamicDocument):
     title = db.StringField(max_length=255, required=True)
     slug = db.StringField(max_length=255, required=True)
     comments = db.ListField(db.EmbeddedDocumentField('Comment'))
+    #author = db.StringField(max_length=255, required=True)
 
     def get_absolute_url(self):
         return url_for('post', kwargs={"slug": self.slug})

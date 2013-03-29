@@ -1,4 +1,4 @@
-from flask import Blueprint, request, redirect, render_template, url_for
+from flask import Blueprint, request, redirect, render_template, url_for, session, g
 from flask.views import MethodView
 
 from flask.ext.mongoengine.wtf import model_form
@@ -38,7 +38,7 @@ class Detail(MethodView):
             post = Post.objects.get_or_404(slug=slug)
             # Handle old posts types as well
             cls = post.__class__ if post.__class__ != Post else BlogPost
-            form_cls = model_form(cls, exclude=('created_at', 'comments'))
+            form_cls = model_form(cls, exclude=('created_at', 'comments', 'author'))
             if request.method == 'POST':
                 form = form_cls(request.form, inital=post._data)
             else:
@@ -47,7 +47,7 @@ class Detail(MethodView):
             # Determine which post type we need
             cls = self.class_map.get(request.args.get('type', 'post'))
             post = cls()
-            form_cls = model_form(cls, exclude=('created_at', 'comments'))
+            form_cls = model_form(cls, exclude=('created_at', 'comments', 'author'))
             form = form_cls(request.form)
         context = {
             "post": post,
@@ -67,6 +67,7 @@ class Detail(MethodView):
         if form.validate():
             post = context.get('post')
             form.populate_obj(post)
+            #post(author=g.user)
             post.save()
 
             return redirect(url_for('admin.index'))

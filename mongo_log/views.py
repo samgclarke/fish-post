@@ -85,6 +85,7 @@ def after_login(resp):
         session.pop('remember_me', None)
     return redirect(request.args.get('next') or url_for('admin.list'))
     """
+    session['user'] = user
     session['email'] = resp.email
     if user is not None:
         flash(u'Successfully signed in')
