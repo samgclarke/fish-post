@@ -3,15 +3,12 @@ import os
 import datetime
 from flask import Flask, url_for
 from flask.ext.mongoengine import MongoEngine, mongoengine
-
+from mongoengine import connect
 
 from config import app
 
-# get config settings
-if __name__ == '__main__':
-    app.config.from_object('config')
-else:
-    app.config.from_object('heroku_config')
+
+app.config.from_object('config')
 
 
 db = MongoEngine(app)
