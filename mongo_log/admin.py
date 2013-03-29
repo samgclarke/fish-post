@@ -3,7 +3,7 @@ from flask.views import MethodView
 
 from flask.ext.mongoengine.wtf import model_form
 
-###from tumblelog.auth import requires_auth
+from mongo_log.views import login_required
 from mongo_log.models import Post, BlogPost, \
     Video, Image, Quote, Comment
 
@@ -11,7 +11,8 @@ admin = Blueprint('admin', __name__, template_folder='templates')
 
 
 class List(MethodView):
-    ###decorators = [requires_auth]
+    decorators = [login_required]
+
     cls = Post
 
     def get(self):
@@ -21,7 +22,8 @@ class List(MethodView):
 
 class Detail(MethodView):
 
-    ###decorators = [requires_auth]
+    decorators = [login_required]
+
     # Map post types to models
     class_map = {
         'post': BlogPost,
