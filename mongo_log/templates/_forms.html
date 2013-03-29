@@ -5,20 +5,13 @@
   {{ field() }}
 {% else %}
   <div class="clearfix {% if field.errors %}error{% endif %}">
-    {% if field.name == "author" %}
-        <span style="display:none">{{ field.label }}</span>
-    {% else %}
-        {{ field.label }} 
-    {% endif %}
+    {{ field.label }}
     <div class="input">
       {% if field.name == "body" %}
         {{ field(rows=10, cols=40) }}
-      {% elif field.name == "author" %}
-          <span style="display:none">{{ field(rows=10, cols=40) }}</span>
       {% else %}
         {{ field() }}
       {% endif %}
-
       {% if field.errors or field.help_text %}
         <span class="help-inline">
         {% if field.errors %}
@@ -28,7 +21,6 @@
         {% endif %}
         </span>
       {% endif %}
-
     </div>
   </div>
 {% endif %}
