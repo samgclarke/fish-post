@@ -1,5 +1,6 @@
 Flask==0.9
 Flask-OpenID==1.1.1
+Flask-Script==0.5.3
 Flask-WTF==0.8.3
 Jinja2==2.6
 WTForms==1.0.3
