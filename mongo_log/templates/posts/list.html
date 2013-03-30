@@ -20,7 +20,7 @@
       {% endif %}
       <p>
         <strong>{{ post.author }}</strong> | 
-        {{ post.created_at.strftime('%H:%M %Y-%m-%d') }} |
+        {{ post.created_at.strftime('%A, %d %B %Y, %R') }} |
         {% with total=post.comments|length %}
             {{ total }} comment {%- if total > 1 %}s{%- endif -%}
         {% endwith %}
