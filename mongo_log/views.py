@@ -42,6 +42,8 @@ def before_request():
     g.user = None
     if 'email' in session:
         g.user = User.objects.get_or_404(email=session['email'])
+        session['user'] = g.user
+        ##print "USER: " + str(g.user)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -69,6 +71,8 @@ def after_login(resp):
     if resp.email is None or resp.email == "":
         flash('Invalid login. Please try again.')
         redirect(url_for('login'))
+    else:
+        session['email'] = resp.email
     # get user object based on request
     user = User.objects.get(email=resp.email)
     """
