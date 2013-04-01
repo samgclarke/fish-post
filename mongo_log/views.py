@@ -74,7 +74,11 @@ def after_login(resp):
     else:
         session['email'] = resp.email
     # get user object based on request
-    user = User.objects.get(email=resp.email)
+    try:
+        user = User.objects.get(email=resp.email)
+    except User.DoesNotExist:
+        flash(u'Your credentials have not been recognized. Please try again.')
+        return redirect(url_for('login'))
     """
     if user is None:
         username = resp.nickname
@@ -89,14 +93,13 @@ def after_login(resp):
         session.pop('remember_me', None)
     return redirect(request.args.get('next') or url_for('admin.list'))
     """
-    session['user'] = user
     session['email'] = resp.email
     if user is not None:
         flash(u'Successfully signed in')
         g.user = user
         return redirect(oid.get_next_url())
     else:
-        flash(u'Your credentials have not been recognized')
+        flash(u'Your credentials have not been recognized. Please try again.')
         return redirect(url_for('login'))
     return redirect(url_for('success', next=oid.get_next_url(),
                             username=resp.nickname,
