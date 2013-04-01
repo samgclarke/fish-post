@@ -3,6 +3,7 @@ import os
 from flask.ext.mongoengine import MongoEngine
 
 from config import app
+app.debug = True
 
 # get config settings
 if __name__ == '__main__':

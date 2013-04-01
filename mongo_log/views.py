@@ -42,8 +42,6 @@ def before_request():
     g.user = None
     if 'email' in session:
         g.user = User.objects.get_or_404(email=session['email'])
-        session['user'] = g.user
-        ##print "USER: " + str(g.user)
 
 
 @app.route('/login', methods=['GET', 'POST'])
@@ -71,14 +69,8 @@ def after_login(resp):
     if resp.email is None or resp.email == "":
         flash('Invalid login. Please try again.')
         redirect(url_for('login'))
-    else:
-        session['email'] = resp.email
     # get user object based on request
-    try:
-        user = User.objects.get(email=resp.email)
-    except User.DoesNotExist:
-        flash(u'Your credentials have not been recognized. Please try again.')
-        return redirect(url_for('login'))
+    user = User.objects.get(email=resp.email)
     """
     if user is None:
         username = resp.nickname
@@ -93,13 +85,14 @@ def after_login(resp):
         session.pop('remember_me', None)
     return redirect(request.args.get('next') or url_for('admin.list'))
     """
+    session['user'] = user
     session['email'] = resp.email
     if user is not None:
         flash(u'Successfully signed in')
         g.user = user
         return redirect(oid.get_next_url())
     else:
-        flash(u'Your credentials have not been recognized. Please try again.')
+        flash(u'Your credentials have not been recognized')
         return redirect(url_for('login'))
     return redirect(url_for('success', next=oid.get_next_url(),
                             username=resp.nickname,
