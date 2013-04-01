@@ -69,8 +69,11 @@ def after_login(resp):
     if resp.email is None or resp.email == "":
         flash('Invalid login. Please try again.')
         redirect(url_for('login'))
-    # get user object based on request
-    user = User.objects.get(email=resp.email)
+    try:
+        # get user object based on request
+        user = User.objects.get(email=resp.email)
+    except User.DoesNotExist:
+        return redirect(url_for('login'))
     """
     if user is None:
         username = resp.nickname
