@@ -19,11 +19,17 @@
         <p><img src="{{ post.image_url }}" /><p>
       {% endif %}
       <p>
-        <strong>{{ post.author }}</strong> | 
+        Posted by <strong style="color:#D500A2">{{ post.author }}</strong> | 
         {{ post.created_at.strftime('%A, %d %B %Y, %R') }} |
         {% with total=post.comments|length %}
-            {{ total }} comment {%- if total > 1 %}s{%- endif -%}
+            <a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ total }} comment {%- if total > 1 %}s{%- endif -%}</a>
         {% endwith %}
+        <br /><br />
+        {% for comment in post.comments %}
+          <span style="padding-left: 5px"><strong style="color:#D500A2">{{ comment.author }}</strong>: <i>{{ comment.body }}</i></span><br />
+        {% endfor %}
       </p>
+      <hr style="width: 640px" />
+      <br /><br />
     {% endfor %}
 {% endblock %}
