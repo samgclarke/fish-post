@@ -223,7 +223,7 @@
 			"file": "application.py",
 			"settings":
 			{
-				"buffer_size": 458,
+				"buffer_size": 475,
 				"line_ending": "Unix"
 			}
 		},
@@ -247,47 +247,15 @@
 			"file": "mongo_log/views.py",
 			"settings":
 			{
-				"buffer_size": 4550,
+				"buffer_size": 4639,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "mongo_log/templates/admin/base.html",
+			"file": "mongo_log/admin.py",
 			"settings":
 			{
-				"buffer_size": 1325,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_get_zipcode_environmental_factors.js",
-			"settings":
-			{
-				"buffer_size": 1915,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "mongo_log/templates/admin/list.html",
-			"settings":
-			{
-				"buffer_size": 746,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "mongo_log/templates/_forms.html",
-			"settings":
-			{
-				"buffer_size": 712,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "mongo_log/templates/posts/list.html",
-			"settings":
-			{
-				"buffer_size": 916,
+				"buffer_size": 2755,
 				"line_ending": "Unix"
 			}
 		},
@@ -416,6 +384,11 @@
 	},
 	"file_history":
 	[
+		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/templates/admin/base.html",
+		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/templates/admin/list.html",
+		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/templates/posts/list.html",
+		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/templates/_forms.html",
+		"/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_get_zipcode_environmental_factors.js",
 		"/home/sam/.config/sublime-text-2/Packages/Web Inspector/swi.sublime-settings",
 		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/admin.py",
 		"/home/sam/Dropbox/flask-projects/mongo_log/mongo_log/templates/base.html",
@@ -493,7 +466,6 @@
 		"/home/sam/Dropbox/django-projects/unirac/unirac/static/css/rs_style.css",
 		"/home/sam/Dropbox/django-projects/datazone/docs/index.rst",
 		"/home/sam/Dropbox/django-projects/unirac/documentation/source/introduction.rst",
-		"/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_get_zipcode_environmental_factors.js",
 		"/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_bom_load_session_vars.js",
 		"/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_populate_attachment_accessories.js",
 		"/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_update_part_quantities.js",
@@ -539,11 +511,7 @@
 		"/home/sam/Dropbox/django-projects/unirac/unirac/templates/500.html",
 		"/home/sam/Dropbox/django-projects/unirac/unirac/templates/404.html",
 		"/home/sam/Desktop/tool_bom.html",
-		"/home/sam/Dropbox/django-projects/unirac/registration/views.py",
-		"/home/sam/Dropbox/django-projects/unirac/unirac/swcp_local_settings.py",
-		"/home/sam/Dropbox/django-projects/unirac/static/css/rs_style.css",
-		"/home/sam/Dropbox/django-projects/unirac/static/css/bootstrap.css",
-		"/home/sam/Dropbox/Rival Schools/Rival Schools - Unirac/130127_EG_Code_Updates/tool/views.py"
+		"/home/sam/Dropbox/django-projects/unirac/registration/views.py"
 	],
 	"find":
 	{
@@ -728,7 +696,7 @@
 	"groups":
 	[
 		{
-			"selected": 5,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -736,15 +704,15 @@
 					"file": "application.py",
 					"settings":
 					{
-						"buffer_size": 458,
+						"buffer_size": 475,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								31,
-								31
+								475,
+								475
 							]
 						],
 						"settings":
@@ -859,8 +827,8 @@
 						"selection":
 						[
 							[
-								1352,
-								1352
+								591,
+								591
 							]
 						],
 						"settings":
@@ -958,7 +926,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 663.0,
+						"translation.y": 357.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -975,8 +943,8 @@
 						"selection":
 						[
 							[
-								556,
-								556
+								123,
+								123
 							]
 						],
 						"settings":
@@ -1084,15 +1052,15 @@
 					"file": "mongo_log/views.py",
 					"settings":
 					{
-						"buffer_size": 4550,
+						"buffer_size": 4639,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								90,
-								90
+								1561,
+								1561
 							]
 						],
 						"settings":
@@ -1190,25 +1158,25 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 867.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "mongo_log/templates/admin/base.html",
+					"file": "mongo_log/admin.py",
 					"settings":
 					{
-						"buffer_size": 1325,
+						"buffer_size": 2755,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1065,
-								1065
+								2077,
+								2077
 							]
 						],
 						"settings":
@@ -1301,476 +1269,12 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "/home/sam/Dropbox/django-projects/unirac/tool/static/js/tool_get_zipcode_environmental_factors.js",
-					"settings":
-					{
-						"buffer_size": 1915,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								706,
-								706
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"syntax": "Packages/Djaneiro/Syntaxes/Python Django.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "mongo_log/templates/admin/list.html",
-					"settings":
-					{
-						"buffer_size": 746,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								406,
-								406
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "mongo_log/templates/_forms.html",
-					"settings":
-					{
-						"buffer_size": 712,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								496,
-								496
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "mongo_log/templates/posts/list.html",
-					"settings":
-					{
-						"buffer_size": 916,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								729,
-								729
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": false,
-							"sublimelinter_mark_style": "outline",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Djaneiro/Syntaxes/HTML (Django).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 459.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1778,11 +1282,11 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
-					"buffer": 9,
+					"buffer": 5,
 					"file": "/home/sam/Dropbox/flask-projects/tumblelog/tumblelog/views.py",
 					"settings":
 					{
@@ -1898,7 +1402,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 10,
+					"buffer": 6,
 					"file": "/home/sam/Dropbox/flask-projects/tumblelog/tumblelog/config.py",
 					"settings":
 					{
@@ -2012,7 +1516,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 11,
+					"buffer": 7,
 					"file": "/home/sam/Dropbox/flask-projects/tumblelog/manage.py",
 					"settings":
 					{
@@ -2126,7 +1630,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 12,
+					"buffer": 8,
 					"file": "/home/sam/Dropbox/flask-projects/tumblelog/tumblelog/__init__.py",
 					"settings":
 					{
@@ -2270,7 +1774,7 @@
 		"cols":
 		[
 			0.0,
-			0.502235469449,
+			0.239846651152,
 			1.0
 		],
 		"rows":

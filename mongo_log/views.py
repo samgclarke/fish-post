@@ -110,6 +110,7 @@ def logout():
     return redirect(oid.get_next_url())
 ############################ OPENID ######################
 
+
 ############################ POSTS  ######################
 posts = Blueprint('posts', __name__, template_folder='templates')
 
