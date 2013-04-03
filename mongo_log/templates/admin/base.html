@@ -33,10 +33,12 @@
           $('#title').keyup(function () {
               // get title
               var val = $('#title').val();
-              // replace all space with dashes
-              var slug = val.replace(/\s/g, "-");
-              // inject into slug
-              $('#slug').val(slug);
+              // replace all spaces with dashes
+              // replace any non alphanumeric characters
+              var slug = val.replace( /[^a-zA-Z0-9]+/g, "-")
+
+              // inject into slug as lowercase
+              $('#slug').val(slug.toLowerCase());
           })
       });
   </script>
