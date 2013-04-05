@@ -119,8 +119,11 @@ class ListView(MethodView):
 
     #decorators = [login_required]
 
-    def get(self):
-        posts = Post.objects.all()
+    def get(self, page=1):
+        if request.args.get('page'):
+            page = int(request.args.get('page'))
+        posts = Post.objects.paginate(page=page, per_page=10)
+        #raise Exception
         return render_template('posts/list.html', posts=posts)
 
 

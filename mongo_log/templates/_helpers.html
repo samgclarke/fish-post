@@ -1,0 +1,15 @@
+{% macro render_pagination(pagination, endpoint='index') %}
+  <div>
+  {%- for page in pagination.iter_pages() %}
+    {% if page %}
+      {% if page != pagination.page %}
+        <span style="background: #efefef;padding:3px 5px;"><a href="{{ url_for(endpoint, page=page) }}">{{ page }}</a></span>
+      {% else %}
+        <strong style="padding:3px 5px;">{{ page }}</strong>
+      {% endif %}
+    {% else %}
+      <span>…</span>
+    {% endif %}
+  {%- endfor %}
+  </div>
+{% endmacro %}
