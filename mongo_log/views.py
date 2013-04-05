@@ -57,6 +57,8 @@ def login():
         )
     return render_template(
         'login.html',
+        next=oid.get_next_url(),
+        error=oid.fetch_error(),
         title='Sign In',
         form=form,
         providers=OPENID_PROVIDERS
