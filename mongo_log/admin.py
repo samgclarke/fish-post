@@ -17,7 +17,7 @@ class List(MethodView):
     cls = Post
 
     def get(self):
-        posts = self.cls.objects.all()
+        posts = self.cls.objects.filter(author=g.user)
         return render_template('admin/list.html', posts=posts)
 
 
