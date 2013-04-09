@@ -3,6 +3,9 @@
 {% block content %}
 
     {% for post in posts.items %}
+
+    <div class="post_content">
+
       <h2><a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ post.title }}</a></h2>
       {% if post.body %}
         {% if post.post_type == 'Quote' %}
@@ -26,11 +29,12 @@
         {% endwith %}
         <br /><br />
         {% for comment in post.comments %}
-          <span style="display: inline-block; padding: 5px 0px 0px 5px; width: 635px;"><strong style="color:#D500A2">{{ comment.author }}</strong>: <i>{{ comment.body }}</i></span><br />
+          <span><strong style="color:#D500A2">{{ comment.author }}</strong>: <i>{{ comment.body }}</i></span><br />
         {% endfor %}
       </p>
-      <hr style="width: 640px" />
-      <br />
+
+    </div>
+
     {% endfor %}
 
     <div>
