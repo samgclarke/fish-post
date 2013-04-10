@@ -2,6 +2,12 @@
 
 {% block content %}
 
+    <div class="pagination_div">
+      <strong>Page</strong>:
+      {% from "_helpers.html" import render_pagination %} 
+      {{ render_pagination(posts, endpoint='posts.list') }}
+    </div> 
+
     {% for post in posts.items %}
 
     <div class="post_content">
@@ -38,7 +44,7 @@
     {% endfor %}
 
     <div>
-      <strong>Page</strong><br /><br />
+      <strong>Page</strong>:
       {% from "_helpers.html" import render_pagination %}
        
       {{ render_pagination(posts, endpoint='posts.list') }}
