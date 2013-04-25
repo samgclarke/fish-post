@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-import os
 from flask.ext.mongoengine import MongoEngine
-
 from config import app
+import os
 app.debug = True
 
 # get config settings
