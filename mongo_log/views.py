@@ -6,9 +6,9 @@ from functools import wraps
 import os
 
 from flask.ext.openid import OpenID
-from forms import LoginForm
+from mongo_log.forms import LoginForm
 from config import OPENID_PROVIDERS
-from models import User, ROLE_USER
+from mongo_log.models import User, ROLE_USER
 
 from config import app
 from mongo_log.models import Post, Comment

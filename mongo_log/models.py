@@ -1,6 +1,6 @@
 import datetime
-from application import db
 from flask import url_for
+from application import db
 
 
 ROLE_USER = 0
@@ -38,7 +38,7 @@ class Post(db.DynamicDocument):
     title = db.StringField(max_length=255, required=True)
     slug = db.StringField(max_length=255, required=True)
     comments = db.ListField(db.EmbeddedDocumentField('Comment'))
-    author = db.ReferenceField(User)
+    author = db.ReferenceField(User, dbref=True)
 
     def get_absolute_url(self):
         return url_for('post', kwargs={"slug": self.slug})
