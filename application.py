@@ -4,6 +4,8 @@ from config import app
 import os
 app.debug = True
 
+app.secret_key = 'teddymonkey'
+
 # get config settings
 if __name__ == '__main__':
     app.config.from_object('config')
