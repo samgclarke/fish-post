@@ -1,6 +1,6 @@
 import datetime
-from flask import url_for
 from application import db
+from flask import url_for
 
 
 ROLE_USER = 0

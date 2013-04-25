@@ -10,7 +10,7 @@ if __name__ == '__main__':
 else:
     app.config.from_object('heroku_config')
 
-# wrapp app in mongengine
+# wrap app in mongengine
 db = MongoEngine(app)
 
 if __name__ == '__main__':
