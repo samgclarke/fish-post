@@ -13,11 +13,6 @@ from mongo_log.models import Post, BlogPost, \
 from config import app
 
 
-# email server
-app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
-app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
-
-
 # send mail function
 def send_mail(to_address, from_address, subject, plaintext, html):
     r = requests.post(
@@ -96,9 +91,9 @@ class Detail(MethodView):
             form.populate_obj(post)
             post.author = g.user
             post.save()
-            raise Exception
+
             send_mail(
-                to_address='cronneloctopus@gmail.com',
+                to_address=session['email'],
                 from_address='from admin',
                 subject='Welcome to Disc Golf!',
                 plaintext='Welcome to Disc Golf!',
