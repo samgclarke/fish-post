@@ -189,11 +189,11 @@ class DetailView(MethodView):
             post.save()
 
             send_mail(
-                to_address='cronneloctopus@gmail.com',
-                from_address='discgolf-app@gmail.com',
-                subject='from views',
-                plaintext='Welcome to Disc Golf!',
-                html='<b>Welcome to Disc Golf!</b>'
+                to_address=session['email'],
+                from_address='freaklpost-app@gmail.com',
+                subject='You Just Posted to Freak-Post',
+                plaintext='Thanks for posting.',
+                html='<b>Thanks for posting.</b>'
             )
 
             return redirect(url_for('posts.detail', slug=slug))
