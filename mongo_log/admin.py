@@ -96,7 +96,7 @@ class Detail(MethodView):
             form.populate_obj(post)
             post.author = g.user
             post.save()
-
+            raise Exception
             send_mail(
                 to_address='cronneloctopus@gmail.com',
                 from_address='from admin',
