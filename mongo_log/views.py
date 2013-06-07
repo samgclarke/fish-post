@@ -4,6 +4,7 @@ from flask.views import MethodView
 from flask.ext.mongoengine.wtf import model_form
 from functools import wraps
 import os
+import requests
 
 from flask.ext.openid import OpenID
 from mongo_log.forms import LoginForm
@@ -12,6 +13,27 @@ from mongo_log.models import User, ROLE_USER
 
 from config import app
 from mongo_log.models import Post, Comment
+
+
+# email server
+app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
+app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
+
+
+# send mail function
+def send_mail(to_address, from_address, subject, plaintext, html):
+    r = requests.post(
+        "https://api.mailgun.net/v2/%s/messages" % app.config['MAILGUN_DOMAIN'],
+        auth=("api", app.config['MAILGUN_KEY']),
+        data={
+            "from": from_address,
+            "to": to_address,
+            "subject": subject,
+            "text": plaintext,
+            "html": html
+        }
+    )
+    return r
 
 
 ############################ OPENID ######################
@@ -160,6 +182,14 @@ class DetailView(MethodView):
             post = context.get('post')
             post.comments.append(comment)
             post.save()
+
+            send_mail(
+                to_address='cronneloctopus@gmail.com',
+                from_address='discgolf-app@gmail.com',
+                subject='Welcome to Disc Golf!',
+                plaintext='Welcome to Disc Golf!',
+                html='<b>Welcome to Disc Golf!</b>'
+            )
 
             return redirect(url_for('posts.detail', slug=slug))
 
