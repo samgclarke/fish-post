@@ -93,11 +93,11 @@ class Detail(MethodView):
             post.save()
 
             send_mail(
-                to_address=session['email'],
-                from_address='from admin',
-                subject='Welcome to Disc Golf!',
-                plaintext='Welcome to Disc Golf!',
-                html='<b>Welcome to Disc Golf!</b>'
+                to_address=g.user.email,
+                from_address='freaklpost-app@gmail.com',
+                subject='You Just Posted to Freak-Post',
+                plaintext='Thanks for posting.',
+                html='<b>Thanks for posting.</b>'
             )
 
             return redirect(url_for('admin.index'))
