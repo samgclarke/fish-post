@@ -92,8 +92,10 @@ class Detail(MethodView):
             post.author = g.user
             post.save()
 
+            # get list of user emails
+            
             send_mail(
-                to_address=g.user.email,
+                to_address='cronneloctopus@gmail.com',
                 from_address='freaklpost-app@gmail.com',
                 subject='You Just Posted to Freak-Post',
                 plaintext='Thanks for posting.',
