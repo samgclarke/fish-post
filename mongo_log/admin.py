@@ -95,7 +95,9 @@ class Detail(MethodView):
             # get list of user emails
             
             send_mail(
-                to_address='cronneloctopus@gmail.com',
+                to_address=[
+                    'cronneloctopus@gmail.com', 'sam@rivalschoolsonline.com'
+                ],
                 from_address='freaklpost-app@gmail.com',
                 subject='You Just Posted to Freak-Post',
                 plaintext='Thanks for posting.',
