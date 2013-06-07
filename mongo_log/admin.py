@@ -96,12 +96,12 @@ class Detail(MethodView):
             
             send_mail(
                 to_address=[
-                    'cronneloctopus@gmail.com', 'sam@rivalschoolsonline.com'
+                    'cronneloctopus@gmail.com', 'tisasmallworld@gmail.com'
                 ],
                 from_address='freaklpost-app@gmail.com',
-                subject='You Just Posted to Freak-Post',
-                plaintext='Thanks for posting.',
-                html='<b>Thanks for posting.</b>'
+                subject='Yo! New Post on Freak-Post!',
+                plaintext='Someone posted something awesome on Freak-Post.',
+                html='<b>Someone posted something awesome on Freak-Post.</b>'
             )
 
             return redirect(url_for('admin.index'))
