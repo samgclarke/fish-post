@@ -187,7 +187,7 @@ class DetailView(MethodView):
             post = context.get('post')
             post.comments.append(comment)
             post.save()
-            raise Exception
+
             send_mail(
                 to_address=session['email'],
                 from_address='freaklpost-app@gmail.com',
