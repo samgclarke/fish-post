@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{%- block topbar -%}
+<div class="topbar" data-dropdown="dropdown">
+  <div class="fill">
+    <div class="container">
+      <h2>
+           <a href="/" class="brand">Home</a>
+      </h2>
+      <h2>
+           <a href="{{ url_for("admin.index") }}" class="brand">Post Something</a>
+      </h2>
+      <ul class="nav secondary-nav">
+        <li class="menu">
+            <a href="#" class="menu">Create new</a>
+            <ul class="menu-dropdown">
+            {% for type in ('post', 'video', 'image', 'quote') %}
+                <li><a href="{{ url_for("admin.create", type=type) }}">{{ type|title }}</a></li>
+            {% endfor %}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+{%- endblock -%}
+
+
+{% block js_footer %}
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="http://twitter.github.com/bootstrap/1.4.0/bootstrap-dropdown.js"></script>
+  <script type="text/javascript">
+      $(document).ready(function () {
+          $('#title').keyup(function () {
+              // get title
+              var val = $('#title').val();
+              // replace all spaces with dashes
+              // replace any non alphanumeric characters
+              var slug = val.replace( /[^a-zA-Z0-9]+/g, "-")
+
+              // inject into slug as lowercase
+              $('#slug').val(slug.toLowerCase());
+          })
+      });
+  </script>
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="pagination_div">
+      <strong>Page</strong>:
+      {% from "_helpers.html" import render_pagination %} 
+      {{ render_pagination(posts, endpoint='posts.list') }}
+    </div> 
+
+    {% for post in posts.items %}
+
+    <div class="post_content">
+
+      <h2><a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ post.title }}</a></h2>
+      {% if post.body %}
+        {% if post.post_type == 'Quote' %}
+          <blockquote>{{ post.body|truncate(100) }}</blockquote>
+          <p>{{ post.author }}</p>
+        {% else %}
+          <p>{{ post.body|truncate(100) }}</p>
+        {% endif %}
+      {% endif %}
+      {% if post.embed_code %}
+        {{ post.embed_code|safe() }}
+      {% endif %}
+      {% if post.image_url %}
+        <p><img src="{{ post.image_url }}" /><p>
+      {% endif %}
+      <p>
+        Posted by <strong style="color:#D500A2">{{ post.author }}</strong> | 
+        {{ post.created_at.strftime('%A, %d %B %Y, %R') }} |
+        {% with total=post.comments|length %}
+            <a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ total }} comment {%- if total > 1 %}s{%- endif -%}</a>
+        {% endwith %}
+        <br /><br />
+        {% for comment in post.comments %}
+          <span><strong style="color:#D500A2">{{ comment.author }}</strong>: <i>{{ comment.body }}</i></span><br />
+        {% endfor %}
+      </p>
+
+    </div>
+
+    {% endfor %}
+
+    <div>
+      <strong>Page</strong>:
+      {% from "_helpers.html" import render_pagination %}
+       
+      {{ render_pagination(posts, endpoint='posts.list') }}
+    </div>  
+ 
+{% endblock %}
