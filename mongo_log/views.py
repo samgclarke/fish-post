@@ -15,11 +15,6 @@ from config import app
 from mongo_log.models import Post, Comment
 
 
-# email server
-app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
-app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
-
-
 # send mail function
 def send_mail(to_address, from_address, subject, plaintext, html):
     r = requests.post(
@@ -186,7 +181,7 @@ class DetailView(MethodView):
             send_mail(
                 to_address='cronneloctopus@gmail.com',
                 from_address='discgolf-app@gmail.com',
-                subject='Welcome to Disc Golf!',
+                subject='from views',
                 plaintext='Welcome to Disc Golf!',
                 html='<b>Welcome to Disc Golf!</b>'
             )
