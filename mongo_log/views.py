@@ -111,12 +111,12 @@ def after_login(resp):
     # send confirmation email
     send_mail(
         to_address=resp.email,
-        from_address='discgolf-app@gmail.com',
-        subject='from views',
-        plaintext='Welcome to Disc Golf!',
-        html='<b>Welcome to Disc Golf!</b>'
+        from_address='freaklpost-app@gmail.com',
+        subject='You Just Signed In to Freak-Post',
+        plaintext='Welcome to Freak-Post',
+        html='<b>Welcome to Freak-Post</b>'
     )
-    
+
     session['user'] = user
     session['email'] = resp.email
     if user is not None:
