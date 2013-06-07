@@ -107,6 +107,16 @@ def after_login(resp):
         session.pop('remember_me', None)
     return redirect(request.args.get('next') or url_for('admin.list'))
     """
+
+    # send confirmation email
+    send_mail(
+        to_address=resp.email,
+        from_address='discgolf-app@gmail.com',
+        subject='from views',
+        plaintext='Welcome to Disc Golf!',
+        html='<b>Welcome to Disc Golf!</b>'
+    )
+    
     session['user'] = user
     session['email'] = resp.email
     if user is not None:
