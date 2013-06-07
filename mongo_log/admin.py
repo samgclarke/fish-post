@@ -1,3 +1,5 @@
+import requests
+
 from flask import Blueprint, request, redirect, render_template, \
     url_for, session, g
 from flask.views import MethodView
@@ -7,6 +9,30 @@ from flask.ext.mongoengine.wtf import model_form
 from mongo_log.views import login_required
 from mongo_log.models import Post, BlogPost, \
     Video, Image, Quote, User
+
+from config import app
+
+
+# email server
+app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
+app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
+
+
+# send mail function
+def send_mail(to_address, from_address, subject, plaintext, html):
+    r = requests.post(
+        "https://api.mailgun.net/v2/%s/messages" % app.config['MAILGUN_DOMAIN'],
+        auth=("api", app.config['MAILGUN_KEY']),
+        data={
+            "from": from_address,
+            "to": to_address,
+            "subject": subject,
+            "text": plaintext,
+            "html": html
+        }
+    )
+    return r
+
 
 admin = Blueprint('admin', __name__, template_folder='templates')
 
@@ -70,6 +96,14 @@ class Detail(MethodView):
             form.populate_obj(post)
             post.author = g.user
             post.save()
+
+            send_mail(
+                to_address='cronneloctopus@gmail.com',
+                from_address='from admin',
+                subject='Welcome to Disc Golf!',
+                plaintext='Welcome to Disc Golf!',
+                html='<b>Welcome to Disc Golf!</b>'
+            )
 
             return redirect(url_for('admin.index'))
         return render_template('admin/detail.hml', **context)
