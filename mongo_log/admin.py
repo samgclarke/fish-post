@@ -98,10 +98,10 @@ class Detail(MethodView):
             # get list of user emails
             send_mail(
                 to_address=[
-                    'cronneloctopus@gmail.com'
+                    'cronneloctopus@gmail.com',
                     'tisasmallworld@gmail.com'
                 ],
-                from_address='freaklpost-app@gmail.com',
+                from_address='freakpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
                 plaintext='Someone posted something awesome on Freak-Post.',
                 html='Someone posted something awesome on Freak-Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
