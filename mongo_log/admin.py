@@ -91,8 +91,9 @@ class Detail(MethodView):
             form.populate_obj(post)
             post.author = g.user
             post.save()
-
+            
             # get list of user emails
+            url = url_for('post', kwargs={"slug": post.slug})
             
             send_mail(
                 to_address=[
@@ -102,8 +103,7 @@ class Detail(MethodView):
                 from_address='freaklpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
                 plaintext='Someone posted something awesome on Freak-Post.',
-                html='Someone posted something awesome on Freak-Post.\n \
-                %s' % (post.get_absolute_url())
+                html='Someone posted something awesome on Freak-Post.' + url,
             )
 
             return redirect(url_for('admin.index'))
