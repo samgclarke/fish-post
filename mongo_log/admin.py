@@ -99,12 +99,12 @@ class Detail(MethodView):
             send_mail(
                 to_address=[
                     'cronneloctopus@gmail.com'
-                    #'tisasmallworld@gmail.com'
+                    'tisasmallworld@gmail.com'
                 ],
                 from_address='freaklpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
                 plaintext='Someone posted something awesome on Freak-Post.',
-                html='Someone posted something awesome on Freak-Post. <a href="' + app.config["SITE_URL"] + url + '">Link</a>'
+                html='Someone posted something awesome on Freak-Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
             )
 
             return redirect(url_for('admin.index'))
