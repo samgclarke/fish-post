@@ -9,7 +9,7 @@ from flask.ext.openid import OpenID
 from mongo_log.forms import LoginForm
 from config import OPENID_PROVIDERS
 from mongo_log.models import User
-
+    
 from config import app
 from mongo_log.models import Post, Comment
 
