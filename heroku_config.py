@@ -3,6 +3,7 @@ from mongoengine import connect
 
 app = Flask(__name__)
 app.debug = True
+app.config["SITE_URL"] = 'http://freak-post.herokuapp.com'
 
 app.config["MONGODB_DB"] = 'app14198794'
 connect(

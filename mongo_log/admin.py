@@ -93,6 +93,7 @@ class Detail(MethodView):
             post.save()
 
             url = url_for('posts.detail', slug=post.slug)
+            #print app.config["SITE_URL"] + url
     
             # get list of user emails
             send_mail(
@@ -103,7 +104,7 @@ class Detail(MethodView):
                 from_address='freaklpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
                 plaintext='Someone posted something awesome on Freak-Post.',
-                html='Someone posted something awesome on Freak-Post. <a href="' + url + '">Link</a>'
+                html='Someone posted something awesome on Freak-Post. <a href="' + app.config["SITE_URL"] + url + '">Link</a>'
             )
 
             return redirect(url_for('admin.index'))
