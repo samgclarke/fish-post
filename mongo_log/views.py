@@ -8,11 +8,10 @@ import os
 from flask.ext.openid import OpenID
 from mongo_log.forms import LoginForm
 from config import OPENID_PROVIDERS
-from mongo_log.models import User, ROLE_USER
+from mongo_log.models import User
 
 from config import app
 from mongo_log.models import Post, Comment
-
 
 
 ############################ OPENID ######################
@@ -21,7 +20,7 @@ oid = OpenID(app, os.path.join(basedir, 'tmp'))
 
 #@lm.user_loader
 #def load_user(id):
-#    return User.query.get(int(id))
+#    return User.query.get(int(id
 
 
 def login_required(f):
@@ -91,15 +90,6 @@ def after_login(resp):
         session.pop('remember_me', None)
     return redirect(request.args.get('next') or url_for('admin.list'))
     """
-
-    # send confirmation email
-    send_mail(
-        to_address=resp.email,
-        from_address='freaklpost-app@gmail.com',
-        subject='You Just Signed In to Freak-Post',
-        plaintext='Welcome to Freak-Post',
-        html='<b>Welcome to Freak-Post</b>'
-    )
 
     session['user'] = user
     session['email'] = resp.email
