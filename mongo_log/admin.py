@@ -102,6 +102,7 @@ class Detail(MethodView):
                     'tisasmallworld@gmail.com',
                     'acschuhbauer@googlemail.com',
                     'catarinawor@gmail.com',
+                    'kbraunmeister@gmail.com',
                 ],
                 from_address='freakpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
