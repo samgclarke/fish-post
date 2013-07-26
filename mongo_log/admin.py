@@ -99,7 +99,9 @@ class Detail(MethodView):
             send_mail(
                 to_address=[
                     'cronneloctopus@gmail.com',
-                    'tisasmallworld@gmail.com'
+                    'tisasmallworld@gmail.com',
+                    'acschuhbauer@googlemail.com',
+                    'catarinawor@gmail.com',
                 ],
                 from_address='freakpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
