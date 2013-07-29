@@ -114,6 +114,11 @@ def logout():
 ############################ OPENID ######################
 
 
+@app.route('/static/<path:filename>')
+def send_pic(filename):
+    return send_from_directory('../static/', filename)
+
+
 ############################ POSTS  ######################
 posts = Blueprint('posts', __name__, template_folder='templates')
 
