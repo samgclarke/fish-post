@@ -88,14 +88,17 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function () {
-          var youtube = $("iframe[src^='http://www.youtube.com']");
-          var youtube_secure = $("iframe[src^='https://www.youtube.com']");
-          var vimeos = $("iframe[src^='http://player.vimeo.com']");
-          var facebook = $("iframe[src^='https://www.facebook.com']");
+          //var youtube = $("iframe[src^='http://www.youtube.com']");
+          //var youtube_secure = $("iframe[src^='https://www.youtube.com']");
+          //var youtube_html = $("iframe[src^='//www.youtube.com']");
+          //var vimeo = $("iframe[src^='http://player.vimeo.com']");
+          //var vimeo_cdn = $(".video");
+          //var facebook = $("iframe[src^='https://www.facebook.com']");
           //console.log(typeof(youtubes));
-          var vids = youtube.add(youtube_secure).add(vimeos).add(facebook);
+          //var vids = youtube.add(youtube_secure).add(youtube_html).add(vimeo).add(vimeo_cdn).add(facebook);
           //console.log(vids);
-          vids.each(function() {
+          var iframes = $("iframe");
+          iframes.each(function() {
               var aspectRatio = this.height / this.width;
               var new_height = 640 * aspectRatio
               console.log(aspectRatio);
