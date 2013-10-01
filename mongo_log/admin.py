@@ -93,17 +93,16 @@ class Detail(MethodView):
             post.save()
 
             url = url_for('posts.detail', slug=post.slug)
-            #print app.config["SITE_URL"] + url
-    
+
             # get list of user emails
+            users = User.objects.all()
+            recipients_list = []
+            for user in users:
+                recipients_list.append(user.email)
+
+            # send email notification to all users
             send_mail(
-                to_address=[
-                    'cronneloctopus@gmail.com',
-                    'tisasmallworld@gmail.com',
-                    'acschuhbauer@googlemail.com',
-                    'catarinawor@gmail.com',
-                    'kbraunmeister@gmail.com',
-                ],
+                to_address=recipients_list,
                 from_address='freakpost-app@gmail.com',
                 subject='Yo! New Post on Freak-Post!',
                 plaintext='Someone posted something awesome on Freak-Post.',
