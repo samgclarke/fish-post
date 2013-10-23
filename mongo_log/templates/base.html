@@ -4,41 +4,7 @@
     <meta charset="utf-8">
     <title>Freak Post</title>
     <link href="{{ url_for('static', filename='bootstrap.min.css') }}" rel="stylesheet">
-    <style>
-    body {
-      background: #efefef;
-    }
-    .container {
-      width: 664px;
-    }
-    .content {
-      padding-top: 80px;
-    }
-    ul {
-      list-style: none;
-      margin: 0px;
-    }
-    ul.flashes {
-      margin-bottom: 20px;
-    }
-    ul.flashes > li {
-      background: #1d1d1d;
-      color: white;
-      padding: 3px;
-      margin: 5px 0px;
-      width: 657px;
-    }
-    .post_content {
-      background: white;
-      border: 1px solid white;
-      width: 642px;
-      margin-bottom: 30px;
-      padding: 5px 10px;
-    }
-    .pagination_div {
-      margin: 15px 0px;
-    }
-    </style>
+    <link href="{{ url_for('static', filename='freakpost_style.css') }}" rel="stylesheet">
   </head>
 
   <body>
@@ -53,15 +19,13 @@
           <h2>
             <a href="{{ url_for("admin.index") }}" class="brand">Post Something</a>
           </h2>
-
-          <ul>
+          <ul class="floatright">
           {% if g.user %}
-            <li><a href="{{ url_for ("logout") }}">sign out</a>
+            <li><a href="{{ url_for ("logout") }}">sign out</a></li>
           {% else %}
-            <li><a href="{{ url_for ("login") }}">sign in</a>
+            <li><a href="{{ url_for ("login") }}">sign in</a></li>
           {% endif %}
           </ul>
-
         </div>
       </div>
     </div>

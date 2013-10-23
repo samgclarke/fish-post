@@ -1,0 +1,40 @@
+body {
+  background: #efefef;
+}
+.container {
+  width: 664px;
+}
+.content {
+  padding-top: 80px;
+}
+ul {
+  list-style: none;
+  margin: 0px;
+}
+ul.flashes {
+  margin-bottom: 20px;
+}
+ul.flashes > li {
+  background: #1d1d1d;
+  color: white;
+  padding: 3px;
+  margin: 5px 0px;
+  width: 657px;
+}
+.post_content {
+  background: white;
+  border: 1px solid white;
+  width: 642px;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+}
+.pagination_div {
+  margin: 15px 0px;
+}
+.floatright {
+  float:right !important;
+}
+
+.position_relative {
+  position: relative;
+}
