@@ -125,7 +125,7 @@ posts = Blueprint('posts', __name__, template_folder='templates')
 
 class ListView(MethodView):
 
-    #decorators = [login_required]
+    decorators = [login_required]
 
     def get(self, page=1):
         if request.args.get('page'):
@@ -137,7 +137,7 @@ class ListView(MethodView):
 
 class DetailView(MethodView):
 
-    #decorators = [login_required]
+    decorators = [login_required]
 
     form = model_form(Comment, exclude=['created_at'])
 
