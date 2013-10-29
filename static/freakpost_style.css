@@ -1,8 +1,9 @@
 body {
-  background: #efefef;
+  background: #eeeeee;
 }
 .container {
   width: 664px;
+  margin-bottom: 40px;
 }
 .content {
   padding-top: 80px;
@@ -23,7 +24,7 @@ ul.flashes > li {
 }
 .post_content {
   background: white;
-  border: 1px solid white;
+  border: 1px solid #dddddd;
   width: 642px;
   margin-bottom: 30px;
   padding: 5px 10px;
@@ -38,3 +39,20 @@ ul.flashes > li {
 .position_relative {
   position: relative;
 }
+
+
+.pag-link {
+  background: #bfdbdd;
+  padding: 3px 5px;
+}
+.pag-link-text {
+  color: blue;
+}
+/*
+h2 a {
+  color: #03899c;
+}
+p {
+  color: white;
+}
+*/
