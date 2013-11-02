@@ -9,7 +9,7 @@
 
   <body>
     {%- block topbar -%}
-    <div class="topbar" style="position:relative">
+    <div class="topbar" style="z-index:1000">
       <div class="fill">
         <div class="container">
 
@@ -67,7 +67,14 @@
               var new_height = 640 * aspectRatio
               console.log(aspectRatio);
               this.width = 640;
-              this.height = new_height; 
+              this.height = new_height;
+              //Fix z-index youtube video embedding
+              var url = $(this).attr("src");
+              var char = "?";
+              if(url.indexOf("?") != -1){
+                var char = "&";
+              }
+              $(this).attr("src",url+char+"wmode=transparent");
           });
       });
     </script>
