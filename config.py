@@ -14,15 +14,15 @@ app.config["SITE_URL"] = 'http://fish-post.herokuapp.com'
 app.config["MONGODB_DB"] = 'heroku_app20627519'
 connect(
     'heroku_app20627519',
-    username='heroku_app20627519',
-    password='b2m5bh7km6n3v88cm88rlf8aof@ds061238',
-    host='mongodb://heroku_app20627519:b2m5bh7km6n3v88cm88rlf8aof@ds061238.mongolab.com:61238/heroku_app20627519',
-    port=61238
+    username='heroku',
+    password='dbf1051133cbb2c65f6b05ff274d650a',
+    host='mongodb://heroku:dbf1051133cbb2c65f6b05ff274d650a@paulo.mongohq.com:10089/app20627519',
+    port=10089
 )
 
 # email server
-app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
-app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
+#app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
+#app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
 
 
 CSRF_ENABLED = True
