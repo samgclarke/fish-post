@@ -67,6 +67,7 @@ def login():
 
 @oid.after_login
 def after_login(resp):
+    print "resp email: " + resp.email
     # if fields empty, flash error message
     if resp.email is None or resp.email == "":
         flash('Invalid login. Please try again.')
@@ -75,6 +76,7 @@ def after_login(resp):
         # get user object based on request
         user = User.objects.get(email=resp.email)
     except User.DoesNotExist:
+        flash(u'Your credentials have not been recognized')
         return redirect(url_for('login'))
     """
     if user is None:
