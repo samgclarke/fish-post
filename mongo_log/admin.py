@@ -101,6 +101,7 @@ class Detail(MethodView):
                 recipients_list.append(user.email)
 
             # send email notification to all users
+            """
             send_mail(
                 to_address=recipients_list,
                 from_address='freakpost-app@gmail.com',
@@ -108,6 +109,7 @@ class Detail(MethodView):
                 plaintext='Someone posted something awesome on Freak-Post.',
                 html='Someone posted something awesome on Freak-Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
             )
+            """
 
             return redirect(url_for('admin.index'))
         return render_template('admin/detail.hml', **context)
