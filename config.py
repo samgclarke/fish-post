@@ -15,9 +15,9 @@ app.config["MONGODB_DB"] = 'heroku_app20627519'
 connect(
     'heroku_app20627519',
     username='heroku_app20627519',
-    password='fish2014',
-    host='mongodb://heroku_app20627519:fish2014@ds061238.mongolab.com:61238/heroku_app20627519',
-    port=10095
+    password='b2m5bh7km6n3v88cm88rlf8aof@ds061238',
+    host='mongodb://heroku_app20627519:b2m5bh7km6n3v88cm88rlf8aof@ds061238.mongolab.com:61238/heroku_app20627519',
+    port=61238
 )
 
 # email server
