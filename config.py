@@ -5,18 +5,18 @@ from mongoengine import connect
 app = Flask(__name__)
 app.debug = True
 
-app.config["SITE_URL"] = 'http://freak-post.herokuapp.com'
+app.config["SITE_URL"] = 'http://fish-post.herokuapp.com'
 
 #app.config["MONGODB_SETTINGS"] = {'DB': "my_tumble_log"}
 #app.config["SECRET_KEY"] = "KeepThisS3cr3t"
 
 
-app.config["MONGODB_DB"] = 'app14198794'
+app.config["MONGODB_DB"] = 'heroku_app20627519'
 connect(
-    'app14198794',
-    username='heroku',
-    password='3_GdcuX1W7oH=',
-    host='mongodb://heroku:3_GdcuX1W7oH=@alex.mongohq.com:10095/app14198794',
+    'heroku_app20627519',
+    username='heroku_app20627519',
+    password='fish2014',
+    host='mongodb://heroku_app20627519:fish2014@ds061238.mongolab.com:61238/heroku_app20627519',
     port=10095
 )
 

@@ -6,10 +6,11 @@ import os
 app.secret_key = 'teddymonkey'
 
 # get config settings
-if __name__ == '__main__':
-    app.config.from_object('config')
-else:
-    app.config.from_object('heroku_config')
+#if __name__ == '__main__':
+#    app.config.from_object('config')
+#else:
+#    app.config.from_object('heroku_config')
+app.config.from_object('config')
 
 # wrap app in mongengine
 db = MongoEngine(app)
