@@ -5,7 +5,7 @@ from mongoengine import connect
 try:
     from local_config import MONGOHQ_URL
 except ImportError:
-    import MONGOHQ_URL
+    MONGOHQ_URL = os.environ['MONGOHQ_URL']
 
 
 app = Flask(__name__)
