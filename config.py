@@ -2,6 +2,12 @@ from flask import Flask
 from flask import Blueprint
 from mongoengine import connect
 
+try:
+    from local_config import MONGOHQ_URL
+except ImportError:
+    import MONGOHQ_URL
+
+
 app = Flask(__name__)
 app.debug = True
 
@@ -12,12 +18,10 @@ app.config["SITE_URL"] = 'http://fish-post.herokuapp.com'
 
 
 app.config["MONGODB_DB"] = 'heroku_app20627519'
+
 connect(
-    'heroku_app20627519',
-    username='heroku',
-    password='dbf1051133cbb2c65f6b05ff274d650a',
-    host='mongodb://heroku:dbf1051133cbb2c65f6b05ff274d650a@paulo.mongohq.com:10089/app20627519',
-    port=10089
+    '',
+    host=MONGOHQ_URL
 )
 
 # email server
