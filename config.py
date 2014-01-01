@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import Blueprint
 from mongoengine import connect
+import os
 
 try:
     from local_config import MONGOHQ_URL
