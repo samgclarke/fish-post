@@ -1,49 +1,10 @@
 {% extends "base.html" %}
 
-{%- block topbar -%}
-<!--
-<div class="topbar" data-dropdown="dropdown">
-  <div class="fill">
-    <div class="container">
-      <h2>
-           <a href="/" class="brand">Home</a>
-      </h2>
-      <h2>
-           <a href="{{ url_for("admin.index") }}" class="brand">Post Something</a>
-      </h2>
-      <ul class="nav secondary-nav">
-        <li class="menu">
-            <a href="#" class="menu">Create new</a>
-            <ul class="menu-dropdown">
-            {% for type in ('post', 'video', 'image', 'quote') %}
-                <li><a href="{{ url_for("admin.create", type=type) }}">{{ type|title }}</a></li>
-            {% endfor %}
-        </li>
-      </ul>
-    </div>
-  </div>
-</div>
--->
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Home</a></li>
-      <li class="dropdown">
-        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Post Something <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          {% for type in ('post', 'video', 'image', 'quote') %}
-              <li><a href="{{ url_for("admin.create", type=type) }}">{{ type|title }}</a></li>
-          {% endfor %}
-        </ul>
-      </li>
-    </ul>
-  </div>
-</nav>
-{%- endblock -%}
 
 
 {% block js_footer %}
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
   <script src="{{ url_for('static', filename='bootstrap.dropdown.js') }}"></script>
   <script type="text/javascript">
       $(document).ready(function () {
