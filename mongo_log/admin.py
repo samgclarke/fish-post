@@ -51,7 +51,7 @@ class Detail(MethodView):
         'post': BlogPost,
         'video': Video,
         'image': Image,
-        'quote': Quote,
+        'link': Quote,
     }
 
     def get_context(self, slug=None):
