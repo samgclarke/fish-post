@@ -5,10 +5,10 @@ body {
 }
 .container {
   width: 664px;
-  margin-bottom: 40px;
 }
 .content {
   padding-top: 80px;
+  margin-bottom: 40px;
 }
 ul {
   list-style: none;
@@ -61,3 +61,6 @@ p {
   color: white;
 }
 */
+#videoPlayer {
+  width: 400px !important;
+}
