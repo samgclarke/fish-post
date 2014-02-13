@@ -25,9 +25,9 @@
             </ul>
           </li>
           {% if g.user %}
-            <li><a href="{{ url_for ("logout") }}">sign out</a></li>
+            <li><a class="pull-right" href="{{ url_for ("logout") }}">sign out</a></li>
           {% else %}
-            <li><a href="{{ url_for ("login") }}">sign in</a></li>
+            <li><a class="pull-right" href="{{ url_for ("login") }}">sign in</a></li>
           {% endif %}
         </ul>
       </div>
@@ -39,11 +39,9 @@
 
         {% with messages = get_flashed_messages() %}
           {% if messages %}
-            <ul class="flashes">
             {% for message in messages %}
-              <li>{{ message }}</li>
+              <div class="flashes">{{ message }}</div>
             {% endfor %}
-            </ul>
           {% endif %}
         {% endwith %}
 

@@ -17,12 +17,15 @@ ul {
 ul.flashes {
   margin-bottom: 20px;
 }
-ul.flashes > li {
-  background: #1d1d1d;
+.flashes {
+  background: #428bca;
   color: white;
-  padding: 3px;
-  margin: 5px 0px;
-  width: 657px;
+  margin-bottom: 30px;
+  padding: 5px 10px;
+  opacity: 0.8;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
 }
 .post_content {
   background: white;
