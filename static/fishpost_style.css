@@ -64,3 +64,9 @@ p {
 #videoPlayer {
   width: 400px !important;
 }
+
+.logo-nav {
+  height: 50px;
+  margin-right: 40px;
+  margin-top: 3px;
+}
