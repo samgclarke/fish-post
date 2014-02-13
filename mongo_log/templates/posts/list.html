@@ -14,6 +14,9 @@
 
       <h2><a href="{{ url_for('posts.detail', slug=post.slug) }}">{{ post.title }}</a></h2>
       {% if post.body %}
+          <p><a href="{{ post.url }}">{{ post.url }}</a></p>
+      {% endif %}
+      {% if post.body %}
         {% if post.post_type == 'Quote' %}
           <blockquote>{{ post.body|truncate(100) }}</blockquote>
           <p>{{ post.author }}</p>
