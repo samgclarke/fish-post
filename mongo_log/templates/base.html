@@ -24,12 +24,14 @@
               {% endfor %}
             </ul>
           </li>
-          {% if g.user %}
-            <li><a class="pull-right" href="{{ url_for ("logout") }}">sign out</a></li>
-          {% else %}
-            <li><a class="pull-right" href="{{ url_for ("login") }}">sign in</a></li>
-          {% endif %}
         </ul>
+          <span>
+          {% if g.user %}
+            <a class="login-btn pull-right" href="{{ url_for ("logout") }}">sign out</a>
+          {% else %}
+            <a class="login-btn pull-right" href="{{ url_for ("login") }}">sign in</a>
+          {% endif %}
+          </span>
       </div>
     </nav>
     {%- endblock -%}
@@ -58,7 +60,7 @@
           var iframes = $("iframe");
           iframes.each(function() {
               var aspectRatio = this.height / this.width;
-              var new_height = 640 * aspectRatio
+              var new_height = 640 * aspectRatio;
               //console.log(aspectRatio);
               this.width = 640;
               this.height = new_height;
@@ -66,7 +68,7 @@
               var url = $(this).attr("src");
               var char = "?";
               if(url.indexOf("?") != -1){
-                var char = "&";
+                char = "&";
               }
               $(this).attr("src",url+char+"wmode=transparent");
           });

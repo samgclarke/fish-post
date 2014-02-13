@@ -70,6 +70,11 @@ p {
 
 .logo-nav {
   height: 50px;
-  margin-right: 40px;
   margin-top: 3px;
+}
+
+.login-btn {
+  margin: 0px;
+  padding: 0px;
+  margin-top: 15px !important;
 }
