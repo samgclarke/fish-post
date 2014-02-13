@@ -48,7 +48,7 @@ class Detail(MethodView):
 
     # Map post types to models
     class_map = {
-        'post': BlogPost,
+        #'post': BlogPost, # disabled for now
         'video': Video,
         'image': Image,
         'link': Quote,
