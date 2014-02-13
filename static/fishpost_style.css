@@ -26,6 +26,7 @@ ul.flashes {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
+  width: 660px;
 }
 .post_content {
   background: white;
