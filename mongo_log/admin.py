@@ -107,9 +107,9 @@ class Detail(MethodView):
             send_mail(
                 to_address=recipients_list,
                 from_address='freakpost-app@gmail.com',
-                subject='Yo! New Post on Freak-Post!',
-                plaintext='Someone posted something awesome on Freak-Post.',
-                html='Someone posted something awesome on Freak-Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
+                subject='New Post on Fish Post!',
+                plaintext='Someone just posted something on Fish Post.',
+                html='Someone just posted something on Fish Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
             )
 
             return redirect(url_for('admin.index'))
