@@ -106,7 +106,7 @@ class Detail(MethodView):
             # send email notification to all users
             send_mail(
                 to_address=recipients_list,
-                from_address='freakpost-app@gmail.com',
+                from_address='fish-app@gmail.com',
                 subject='New Post on Fish Post!',
                 plaintext='Someone just posted something on Fish Post.',
                 html='Someone just posted something on Fish Post. <br /><b><a href="' + app.config["SITE_URL"] + url + '">Link</a></b>'
