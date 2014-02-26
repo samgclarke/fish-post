@@ -26,8 +26,8 @@ connect(
 )
 
 # email server
-#app.config['MAILGUN_KEY'] = 'key-3z8y4qxoz2cbkgaf2k5gier1ytx9wg14'
-#app.config['MAILGUN_DOMAIN'] = 'app14198794.mailgun.org'
+app.config['MAILGUN_KEY'] = 'key-8lvzjweaoz4wmi3pl5jiea1g45no1zj7'
+app.config['MAILGUN_DOMAIN'] = 'app20627519.mailgun.org'
 
 
 CSRF_ENABLED = True
